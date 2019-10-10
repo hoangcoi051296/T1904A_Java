@@ -2,13 +2,13 @@ package Session2;
 
 import java.util.Scanner;
 
-public class Tamgiac {
+public class TamGiac {
     public int a,b,c;
 
-    public Tamgiac(){
+    public TamGiac(){
     System.out.println("Tam Giac : ");
     }
-    public Tamgiac( int a, int b,int c){
+    public TamGiac(int a, int b, int c){
         if(a<0){
            System.out.println("Canh phai >0");
             return;
@@ -73,7 +73,7 @@ public class Tamgiac {
     }
     public static void main(String args[]){
         System.out.println("Nhap 3 canh cua tam giac : ");
-        Tamgiac tg1 = new Tamgiac();
+        TamGiac tg1 = new TamGiac();
         tg1.input();
         if ( tg1.laTamGiac()){
             System.out.println("Chu vi: "+tg1.getChuvi());
