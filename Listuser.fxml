@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ListUser">
+   <children>
+      <TableView fx:id="tbView" layoutX="14.0" layoutY="46.0" prefHeight="200.0" prefWidth="570.0">
+        <columns>
+          <TableColumn fx:id="fullname" prefWidth="145.0" text="Name" />
+          <TableColumn fx:id="email" prefWidth="142.0" text="Email" />
+            <TableColumn fx:id="age" prefWidth="147.0" text="Age" />
+            <TableColumn fx:id="address" prefWidth="135.0" text="Address" />
+        </columns>
+      </TableView>
+      <Button layoutX="27.0" layoutY="331.0" mnemonicParsing="false" onAction="#addUser" text="Add user" />
+      <Button onAction="#aZ" layoutX="334.0" layoutY="331.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="63.0" text="AZ" />
+      <Button onAction="#zA" layoutX="461.0" layoutY="331.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="63.0" text="ZA" />
+   </children>
+</Pane>
