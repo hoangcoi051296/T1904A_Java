@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:controller="Jv2_Assignment1.ThemSP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="Tname" layoutX="89.0" layoutY="84.0" prefHeight="25.0" prefWidth="358.0" promptText="Ten Sp" />
+      <TextField fx:id="Tid" layoutX="89.0" layoutY="142.0" prefHeight="25.0" prefWidth="358.0" promptText="Ma Sp" />
+      <TextField fx:id="Tprice" layoutX="89.0" layoutY="200.0" prefHeight="25.0" prefWidth="358.0" promptText="Gia Sp" />
+      <TextField fx:id="Tsalary" layoutX="89.0" layoutY="258.0" prefHeight="25.0" prefWidth="358.0" promptText="So luong" />
+      <Button onAction="#submitSP" layoutX="383.0" layoutY="327.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="70.0" text="Submit" />
+   </children>
+</Pane>

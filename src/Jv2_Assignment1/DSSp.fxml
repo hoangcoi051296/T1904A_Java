@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+
+<Pane fx:controller="Jv2_Assignment1.DSSP" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView fx:id="tbView" layoutX="22.0" layoutY="32.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="313.0" prefWidth="532.0">
+         <columns>
+            <TableColumn fx:id="xname" minWidth="0.0" prefWidth="167.0" text="Ten Sp" />
+            <TableColumn fx:id="xid" prefWidth="114.0" text="Ma Sp" />
+            <TableColumn fx:id="xprice" minWidth="0.0" prefWidth="113.0" text="Gia" />
+            <TableColumn fx:id="xsalary" prefWidth="137.0" text="So luong" />
+         </columns>
+      </TableView>
+      <Button onAction="#addSP" layoutX="483.0" layoutY="418.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="71.0" text="ADD" />
+      <Button onAction="#sortByname" layoutX="88.0" layoutY="358.0" mnemonicParsing="false" text="Ten" />
+      <Button onAction="#sortByPrice" layoutX="334.0" layoutY="358.0" mnemonicParsing="false" text="Gia" />
+      <Button layoutX="457.0" layoutY="358.0" mnemonicParsing="false" text="Sl" />
+   </children>
+</Pane>
