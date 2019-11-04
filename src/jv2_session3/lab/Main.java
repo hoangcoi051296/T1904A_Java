@@ -22,7 +22,9 @@ public class Main {
                 try {
                     for (int j=59;j>=0;j--){
                         try {
-                            System.out.println(i+":"+j);
+                           if (j<10){ System.out.println(i+":"+"0"+j);}else{
+                               System.out.println(i+":"+j);
+                           }
                             Thread.sleep(1000);
                             if(i==0 && j==0){
                                 System.out.println("Chuc mung");
