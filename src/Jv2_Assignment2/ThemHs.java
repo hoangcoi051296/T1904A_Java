@@ -5,6 +5,9 @@ import javafx.scene.Parent;
 import javafx.scene.control.TextField;
 
 import java.io.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
 import java.util.ArrayList;
 
 public class ThemHs {
@@ -33,6 +36,18 @@ public class ThemHs {
            }
            Hs h =new Hs(te,tu,di);
            DSHS.list.add(h);
+
+           Class.forName("com.mysql.jdbc.Driver");
+           String url = "jdbc:mysql://localhost:3306/t1904a";
+           String username = "root";
+           String password = "";
+           Connection conn = DriverManager.getConnection(url,username,password);
+
+           Statement stm =conn.createStatement();
+
+           String ins_sql ="Insert into student(student_name, age ,mark)  values ('"+te+"',"+tu+","+di+");";
+           stm.executeUpdate(ins_sql);
+
            Parent lisths = FXMLLoader.load(getClass().getResource("DSHS.fxml"));
            Main.mainStage.getScene().setRoot(lisths);
            if (f.canWrite()) {

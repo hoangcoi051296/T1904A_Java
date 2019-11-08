@@ -11,6 +11,10 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ResourceBundle;
 
 public class DSHS implements Initializable {
@@ -25,8 +29,32 @@ public class DSHS implements Initializable {
        Tten.setCellValueFactory(new PropertyValueFactory<>("ten"));
         Ttuoi.setCellValueFactory(new PropertyValueFactory<>("tuoi"));
         Tdiemthi.setCellValueFactory(new PropertyValueFactory<>("diemthi"));
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            String url = "jdbc:mysql://localhost:3306/t1904a";
+            String username = "root";
+            String password = "";
+            Connection conn = DriverManager.getConnection(url,username,password);
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("DSHS.fxml"));
+            Statement stm =conn.createStatement();
 
-        tbView.setItems(list);
+            String sql = "Select *from student";
+
+            ResultSet rs =stm.executeQuery(sql);
+
+            while (rs.next()){
+               String x = rs.getString("student_name");
+               int y =rs.getInt("age");
+               int z= rs.getInt("mark");
+               Hs s =new Hs(x,y,z);
+               list.add(s);
+
+            }
+            tbView.setItems(list);
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+
     }
     public void addHs(){
         try{
