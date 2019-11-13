@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane  maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="399.0" prefWidth="293.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Lab_session6.Contact_List">
+   <children>
+      <ListView fx:id="lview" onMouseClicked="#viewContact" layoutX="14.0" layoutY="14.0" prefHeight="378.0" prefWidth="265.0" />
+   </children>
+</Pane>
